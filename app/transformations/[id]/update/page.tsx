@@ -1,7 +1,7 @@
 import React from "react";
 
 const UpdateTransformationsPage = () => {
-  return <div>Update</div>;
+  return <div>updatetransformtions</div>;
 };
 
 export default UpdateTransformationsPage;

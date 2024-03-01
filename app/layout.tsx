@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
+import { cn } from "@/lib/utils";
+import "./globals.css";
 
 const IBMPlex = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -11,8 +11,8 @@ const IBMPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SahImagify",
-  description: "AI-powered image generator",
+  title: "Imaginify",
+  description: "An AI Generated Image App",
 };
 
 export default function RootLayout({
@@ -22,13 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-       <html lang="en">
-      <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
-        {children}
-      </body>
-    </html>
-
+      <html lang="en">
+        <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
+          {children}
+        </body>
+      </html>
     </ClerkProvider>
-   
   );
 }

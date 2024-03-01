@@ -1,5 +1,4 @@
-import { SignUp } from "@clerk/clerk-react";
-import React from "react";
+import { SignUp } from "@clerk/nextjs";
 
 const SignupPage = () => {
   return <SignUp />;

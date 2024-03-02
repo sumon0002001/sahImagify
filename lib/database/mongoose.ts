@@ -12,7 +12,7 @@ let cached: MongooseConnection = (global as any).mongoose;
 if (!cached) {
   cached = (global as any).mongoose = { conn: null, promise: null };
 }
-export const dbConnect = async () => {
+export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn;
 
   if (!MONGODB_URL) throw new Error("Please add your Mongo URI to .env.local");
